@@ -1,24 +1,24 @@
 // This file contains all the variables
-variable "ami"{
-    default = "ami-039a49e70ea773ffc"
+variable "ami" {
+  default = "ami-0a54aef4ef3b5f881"
 }
 
 variable "instance_type" {
-    default = "t2.micro"
+  default = "t2.micro"
 }
 
 variable "key" {
-    default = "bees-tito-profile"  #USE YOUR PROFILE KEY HERE
+  default = "jacocoworld5" #USE YOUR PROFILE KEY HERE
 }
 
 variable "tag_Name" {
-    default = "Tito titotesting"
+  default = "agunu_Testing"
 }
 
 variable "tag_Env" {
-    default = "Testing"
+  default = "myTest"
 }
 
 variable "counter" {
-    default = 2
+  default = 2
 }
