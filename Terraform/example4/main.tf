@@ -42,7 +42,7 @@ insufficient_data_actions = []
 terraform {
   backend "s3" {
     bucket = "mybucket4"
-    key    = "Wendy_me\devops\Terraform\example4\terraform.tfstate"
+    key    = "wendy_me\devops\Terraform\example4\terraform.tfstate"
     region = "us-east-2"
   }
 }
