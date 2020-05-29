@@ -8,11 +8,11 @@ variable "instance_type" {
 }
 
 variable "key" {
-  default = "jacocoworld5" #USE YOUR PROFILE KEY HERE
+  default = "mine" #USE YOUR PROFILE KEY HERE
 }
 
-variable "tag_Name" {
-  default = "agunu_Testing"
+variable "tag_name" {
+  default = "wendy_me"
 }
 
 variable "tag_Env" {
