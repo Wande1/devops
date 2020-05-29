@@ -8,7 +8,7 @@ provider "aws" {
   profile = "default"
 }
 
-resource "aws_instance" "Agunu_Testing" {
+resource "aws_instance" "Wendy_me" {
   ami           = var.ami
   count         = var.counter
   instance_type = var.instance_type
@@ -23,11 +23,11 @@ resource "aws_instance" "Agunu_Testing" {
 ## Attach elastic IP to the ec2instance created above
 resource "aws_eip" "ip" {
   count    = var.counter
-  instance = element(aws_instance.Agunu_Testing.*.id, count.index)
+  instance = element(aws_instance.Wende_me.*.id, count.index)
 }
 ##Alarm Cloud watch on ec2
-resource "aws_cloudwatch_metric_alarm" "Agunu_Testing" {
-  alarm_name                = "terraform-test-Agunu_Testing"
+resource "aws_cloudwatch_metric_alarm" "Wendy-me" {
+  alarm_name                = "terraform-test-Wendy_me"
   comparison_operator       = "GreaterThanOrEqualToThreshold"
   evaluation_periods        = "2"
   metric_name               = "CPUUtilization"
