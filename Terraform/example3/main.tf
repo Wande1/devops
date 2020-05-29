@@ -3,17 +3,17 @@
 ## Attach an elastic IP
 ################################
 provider "aws" {
-  region                  = "us-east-1"
+  region                  = "us-east-2"
   profile                 = "default"
 }
 
 resource "aws_instance" "titotesting" {
-    ami                   = "ami-039a49e70ea773ffc"
+    ami                   = "ami-ami-0a54aef4ef3b5f881"
     count                 = 2
     instance_type         = "t2.micro"
-    key_name              = "bees-tito-profile" #USE YOUR PROFILE KEY HERE
+    key_name              = "wendy-me" #USE YOUR PROFILE KEY HERE
     tags = {
-        Name = "The first server"
+        Name = "Wendy Server"
         Env  = "Development"
     }
 }
@@ -21,6 +21,6 @@ resource "aws_instance" "titotesting" {
 ## Attach elastic IP to the ec2instance created above
 resource "aws_eip" "ip"{
     count   = 2
-    instance = element(aws_instance.titotesting.*.id, count.index)
+    instance = element(aws_instance.Wendy Server.*.id, count.index)
 }
 
