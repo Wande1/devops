@@ -23,7 +23,7 @@ resource "aws_instance" "Wendy_me" {
 ## Attach elastic IP to the ec2instance created above
 resource "aws_eip" "ip" {
   count    = var.counter
-  instance = element(aws_instance.Wende_me.*.id, count.index)
+  instance = element(aws_instance.Wendy_me.*.id, count.index)
 }
 ##Alarm Cloud watch on ec2
 resource "aws_cloudwatch_metric_alarm" "Wendy-me" {
@@ -42,7 +42,7 @@ insufficient_data_actions = []
 terraform {
   backend "s3" {
     bucket = "mybucket4"
-    key    = "TerraFormNijaGuy2\devops\Terraform\example4\terraform.tfstate"
+    key    = "Wendy_me\devops\Terraform\example4\terraform.tfstate"
     region = "us-east-2"
   }
 }
