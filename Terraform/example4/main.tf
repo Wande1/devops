@@ -39,12 +39,12 @@ resource "aws_cloudwatch_metric_alarm" "Wendy-me" {
 insufficient_data_actions = []
 }
 
-terraform {
-  backend "s3" {
-    bucket = "mybucket4"
-    key    = "wendy_me\devops\Terraform\example4\terraform.tfstate"
-    region = "us-east-2"
-  }
-}
+##terraform {
+  ##backend "s3" {
+    ##bucket = "mybucket4"
+    ##key    = "wendy_me\devops\Terraform\example4\terraform.tfstate"
+   ## region = "us-east-2"
+  ##}
+##}
 
 
